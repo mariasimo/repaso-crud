@@ -31,14 +31,12 @@
 
         <div class="form-group">
           <label for="park-list">Parque en el que se encuentra:</label>
-          {{#if parks}}
           <select name="park" class="form-control" id="park-list">
-            <option value="" selected disabled>Seleccionar</option>
+            <option value="" selected disabled>{{coasterToEdit.park.name}}</option>
             {{#each parks}}
             <option value="{{id}}">{{name}}</option>
             {{/each}}
           </select>
-          {{/if}}
 
         </div>
 

@@ -71,7 +71,7 @@ router.get('/edit/:id', (req, res) => {
     let coasterToEdit;
 
     Coasters
-    .findById({_id: req.params.id})
+    .findById({_id: req.params.id}).populate('park')
     .then(coasterPayload => {
         coasterToEdit = coasterPayload,
         Parks.find().select({name: 1, _id: 1})
