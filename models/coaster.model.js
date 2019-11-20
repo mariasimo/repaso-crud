@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const coasterSchema = new Schema ({
     name : String,
     description : String,
-    inversion : Number,
+    inversions : Number,
     length : Number,
     active : Boolean,
     park : {type: Schema.Types.ObjectId, ref: "Park"}
